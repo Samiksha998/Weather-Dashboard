@@ -33,3 +33,19 @@ Then open http://127.0.0.1:5000 in your browser.
 
 Notes
 - This example uses the free OpenWeatherMap endpoints. The forecast endpoint returns 5-day/3-hour data and the app shows a small slice of it.
+
+Docker
+
+Build the image from the repository root:
+
+```powershell
+docker build -t weather-dashboard:latest .
+```
+
+Run the container (map port 5000):
+
+```powershell
+docker run --rm -it -p 5000:5000 -e OPENWEATHER_API_KEY=your_key_here weather-dashboard:latest
+```
+
+Then open http://127.0.0.1:5000 in your browser.
