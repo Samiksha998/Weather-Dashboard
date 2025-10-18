@@ -31,6 +31,27 @@ python app.py
 
 Then open http://127.0.0.1:5000 in your browser.
 
+Docker Compose
+
+Create a `.env` file in the repo root (or edit the `.env` file provided) with your API key:
+
+```
+OPENWEATHER_API_KEY=your_openweather_api_key_here
+FLASK_SECRET=change-this-secret
+```
+
+Start with docker compose:
+
+```powershell
+docker compose up --build
+```
+
+Stop and remove containers:
+
+```powershell
+docker compose down
+```
+
 Notes
 - This example uses the free OpenWeatherMap endpoints. The forecast endpoint returns 5-day/3-hour data and the app shows a small slice of it.
 
