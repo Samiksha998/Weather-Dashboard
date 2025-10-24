@@ -1,0 +1,28 @@
+:root{
+  --bg: #0f1724;
+  --card: #0b1320;
+  --muted: #9aa4b2;
+  --accent: #4f46e5;
+  --glass: rgba(255,255,255,0.03);
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Roboto,system-ui; margin:0; background:linear-gradient(180deg,#071021 0%, #071426 100%); color:#e6eef8}
+.container{max-width:980px;margin:32px auto;padding:20px}
+.header{display:flex;justify-content:space-between;align-items:center}
+.subtitle{color:var(--muted);margin-top:6px}
+.nav a{color:var(--muted);margin-left:14px;text-decoration:none}
+.card{background:var(--glass);padding:18px;border-radius:10px;margin-bottom:18px}
+.about p{line-height:1.6}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:14px}
+.projects .project-list{display:grid;grid-template-columns:1fr;gap:12px}
+.project h3{margin:0 0 6px 0}
+.project ul{margin:8px 0 0 18px}
+.contact ul{list-style:none;padding:0;margin:0}
+.contact li{margin:8px 0}
+footer{margin-top:18px;color:var(--muted);text-align:center}
+
+@media(min-width:800px){
+  .projects .project-list{grid-template-columns:repeat(2,1fr)}
+}
