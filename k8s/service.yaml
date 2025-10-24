@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: weather-dashboard-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: weather-dashboard
   ports:
     - protocol: TCP
-      port: 5000
+      port: 80
       targetPort: 5000
-      nodePort: 30080
